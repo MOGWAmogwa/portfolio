@@ -39,10 +39,6 @@ homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact')
 })
 
-function scrollIntoView(selector){  
-    const scrollTo = document.querySelector(selector)
-    scrollTo.scrollIntoView({behavior : 'smooth'});
-}
 
 
 
@@ -55,3 +51,26 @@ document.addEventListener('scroll', () => {
 
 })
 
+// Show "arrow up" button when scrolling down
+
+const arrow = document.querySelector('.arrow');
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight*0.5){
+        arrow.classList.add('visible')
+    } else {
+        arrow.classList.remove('visible')
+    }
+})
+
+// Handle click on the "arrow up" button
+
+arrow.addEventListener('click', () => {
+    scrollIntoView('#home')
+})
+
+
+// 💖 Scroll common function 💖
+function scrollIntoView(selector){  
+    const scrollTo = document.querySelector(selector)
+    scrollTo.scrollIntoView({behavior : 'smooth'});
+}

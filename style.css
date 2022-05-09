@@ -178,6 +178,7 @@ p{
     padding : 40px;
     padding-top: 110px;
     text-align: center;
+    opacity: 1;
 }
 
 .home__avatar{

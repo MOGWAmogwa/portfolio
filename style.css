@@ -12,9 +12,9 @@
     --color-dark-grey : #616161;
     --color-light-grey : #e4e4e4;
     --color-blue : #c8e6ef;
-    --color-light-blue : #e2f1f1a2;
+    --color-light-blue : #d7e4e4;
     --color-medium-blue :#4ca49e41;
-    --color-dark-blue :#a2b5b46f;
+    --color-dark-blue :#d3dcdc;
     --color-orange : #ffc47d;
     --color-black : #000000;
     --color-box-shadow : 0px 0px 15px rgba(107, 107, 107, 0.4);
@@ -63,6 +63,7 @@ a{
 ul{
     list-style: none;
     padding-left: 0;
+    width: 100%;
 
 }
 
@@ -450,7 +451,7 @@ p{
 
 }
 .projects__description h3{
-    color: var(--color-white)
+    color: var(--color-orange)
     
 
 }
@@ -459,6 +460,7 @@ p{
     content: '';
     width: 25px;
     height: 2px;
+    transform: translateX(-50%);
     background-color: var(--color-dark-white);
     display: block;
     position: relative;
@@ -584,12 +586,19 @@ p{
     #navbar{
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-dark-blue);
+    }
+    #navbar.navbar--dark{
+        padding: 16px;
     }
     .navbar__menu{
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
+    }
+    .navbar__menu.open{
+        display:block;
     }
     .about__majors{
         flex-direction: column;

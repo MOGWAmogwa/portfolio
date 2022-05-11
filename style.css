@@ -157,16 +157,16 @@ p{
     cursor: pointer;
     border-radius: var(--size-border-radius);
     text-shadow:  0px 0px 3px #3e3e3e7c;
-
-}
-
-.navbar__menu__item.active{
-    border: 1px solid var(--color-white);
-   
-}
-.navbar__menu__item:hover{
-    background-color: var(--color-dark-pink);
+    border:1px solid transparent;
     border-radius: var(--size-border-radius);
+
+}
+
+
+.navbar__menu__item:hover{
+    border:1px solid white;
+    border-radius: var(--size-border-radius);
+    background-color: var(--color-dark-pink);
 }
 
 .navbar__toggle-btn{
@@ -366,12 +366,12 @@ p{
     padding: 8px 40px;
 }
 
-.category_btn:active,
+.category_btn.selected,
 .category_btn:hover{
     background-color: var(--color-pink);
     color: var(--color-white);
 }
-.category_btn.acive .category_count,
+.category_btn.selected .category_count,
 .category_btn:hover .category_count{
     opacity: 1;
     top: 0px;

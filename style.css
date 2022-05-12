@@ -136,13 +136,12 @@ p{
     z-index: 1;
 }
 
-
-
-.navbar__menu{
+#navbar div .navbar__menu{
     display: flex;
-    
 
 }
+
+
 .navbar__logo{
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
@@ -591,6 +590,10 @@ p{
     #navbar.navbar--dark{
         padding: 16px;
     }
+    #navbar div{
+        width: 100%;
+    }
+    
     .navbar__menu{
         flex-direction: column;
         text-align: center;

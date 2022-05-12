@@ -15,6 +15,7 @@
     --color-light-blue : #d7e4e4;
     --color-medium-blue :#4ca49e41;
     --color-dark-blue :#d3dcdc;
+    --color-mono-blue :  #cddeda;
     --color-orange : #ffc47d;
     --color-black : #000000;
     --color-box-shadow : 0px 0px 15px rgba(107, 107, 107, 0.4);
@@ -130,15 +131,15 @@ p{
 }
 
 #navbar.navbar--dark{
-    background-color: #eaedf0;
+    background-color: var(--color-dark-blue);
     padding: 8px;
     transition: all var(--animation-duration) ease-in-out;
     z-index: 1;
 }
 
-#navbar div .navbar__menu{
+.navbar__menu{
     display: flex;
-
+    justify-content: end;
 }
 
 
@@ -210,6 +211,10 @@ p{
     padding: 8px 12px;
     border: 2px solid white ;
     border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover{
+    background-color: var(--color-orange);
 }
 
 /* Section common */
@@ -306,7 +311,7 @@ p{
 
 .skillset{
     display: flex;
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-mono-blue);
     color: var(--color-light-white);
     margin: 20px 0;
 }
@@ -445,7 +450,7 @@ p{
 }
 
 .project:hover .projects__description{
-    opacity: 0.5;
+    opacity: 0.8;
     transform: translateY(0px);
 
 }
@@ -457,14 +462,14 @@ p{
 
 .projects__description h3:after{
     content: '';
-    width: 25px;
+    width: 50px;
     height: 2px;
     transform: translateX(-50%);
     background-color: var(--color-dark-white);
     display: block;
     position: relative;
     left: 50%;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
 }
 
